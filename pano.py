@@ -164,18 +164,18 @@ class PanoShot():
 
 
     def initSphere(self):
-        '''Initialize the cylinder pano shot'''
+        '''Initialize the sphere pano shot'''
 
         # give first move some room to get there
         self.ticks = TICKS_TO_BEGIN
 
         # Store angle presets in array
-        # more steps
+        # more steps (25 shots)
         if self.lensFOV < 140:
-            self.sphereAngles = [[-90,0], [-45,300], [-45,240], [-45,180], [-45,120], [-45,60], [-45,0], [0,315], [0,270], [0,225], [0,180], [0,135], [0,90], [0,45], [0,0]]
+            self.sphereAngles = [[-90,0], [-60,315], [-60,270], [-60,225], [-60,180], [-60,135], [-60,90], [-60,45], [-60,0], [-30,315], [-30,270], [-30,225], [-30,180], [-30,135], [-30,90], [-30,45], [-30,0], [0,315], [0,270], [0,225], [0,180], [0,135], [0,90], [0,45], [0,0]]
         else:
-            # Fewer steps
-            self.sphereAngles = [[-90,0], [-45,270], [-45,180], [-45,90], [-45,0], [0,300], [0,240], [0,180], [0,120], [0,60], [0,0]]
+            # Fewer steps (19 shots)
+            self.sphereAngles = [[-90,0], [-60,300], [-60,240], [-60,180], [-60,120], [-60,60], [-60,0], [-30,300], [-30,240], [-30,180], [-30,120], [-30,60], [-30,0], [0,300], [0,240], [0,180], [0,120], [0,60], [0,0]]
 
         self.stepsTotal = len(self.sphereAngles)
         self.updatePanoStatus(0, self.stepsTotal)
